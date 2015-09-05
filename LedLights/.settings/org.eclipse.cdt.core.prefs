@@ -299,6 +299,9 @@ environment/project/it.baeyens.arduino.core.toolChain.release.1290472919/A.TOOLS
 environment/project/it.baeyens.arduino.core.toolChain.release.1290472919/A.TOOLS.AVRDUDE.UPLOAD.PATTERN/delimiter=;
 environment/project/it.baeyens.arduino.core.toolChain.release.1290472919/A.TOOLS.AVRDUDE.UPLOAD.PATTERN/operation=replace
 environment/project/it.baeyens.arduino.core.toolChain.release.1290472919/A.TOOLS.AVRDUDE.UPLOAD.PATTERN/value="${A.CMD.PATH}" "-C${A.CONFIG.PATH}" ${A.UPLOAD.VERBOSE} -p${A.BUILD.MCU} -c${A.UPLOAD.PROTOCOL} -P${A.SERIAL.PORT} -b${A.UPLOAD.SPEED} -D "-Uflash\:w\:${A.BUILD.PATH}/${A.BUILD.PROJECT_NAME}.hex\:i"
+environment/project/it.baeyens.arduino.core.toolChain.release.1290472919/A.TOOLS.BOSSAC.PATH/delimiter=;
+environment/project/it.baeyens.arduino.core.toolChain.release.1290472919/A.TOOLS.BOSSAC.PATH/operation=append
+environment/project/it.baeyens.arduino.core.toolChain.release.1290472919/A.TOOLS.BOSSAC.PATH/value=D\:/Arduino/hardware/tools/avr
 environment/project/it.baeyens.arduino.core.toolChain.release.1290472919/A.UPLOAD.MAXIMUM_DATA_SIZE/delimiter=;
 environment/project/it.baeyens.arduino.core.toolChain.release.1290472919/A.UPLOAD.MAXIMUM_DATA_SIZE/operation=replace
 environment/project/it.baeyens.arduino.core.toolChain.release.1290472919/A.UPLOAD.MAXIMUM_DATA_SIZE/value=2048
@@ -325,7 +328,16 @@ environment/project/it.baeyens.arduino.core.toolChain.release.1290472919/JANTJE.
 environment/project/it.baeyens.arduino.core.toolChain.release.1290472919/JANTJE.BOARD_NAME/value=Arduino Nano
 environment/project/it.baeyens.arduino.core.toolChain.release.1290472919/JANTJE.COM_PORT/delimiter=;
 environment/project/it.baeyens.arduino.core.toolChain.release.1290472919/JANTJE.COM_PORT/operation=replace
-environment/project/it.baeyens.arduino.core.toolChain.release.1290472919/JANTJE.COM_PORT/value=COM16
+environment/project/it.baeyens.arduino.core.toolChain.release.1290472919/JANTJE.COM_PORT/value=COM5
+environment/project/it.baeyens.arduino.core.toolChain.release.1290472919/JANTJE.EXTRA.C.COMPILE/delimiter=;
+environment/project/it.baeyens.arduino.core.toolChain.release.1290472919/JANTJE.EXTRA.C.COMPILE/operation=replace
+environment/project/it.baeyens.arduino.core.toolChain.release.1290472919/JANTJE.EXTRA.C.COMPILE/value=
+environment/project/it.baeyens.arduino.core.toolChain.release.1290472919/JANTJE.EXTRA.COMPILE/delimiter=;
+environment/project/it.baeyens.arduino.core.toolChain.release.1290472919/JANTJE.EXTRA.COMPILE/operation=replace
+environment/project/it.baeyens.arduino.core.toolChain.release.1290472919/JANTJE.EXTRA.COMPILE/value=
+environment/project/it.baeyens.arduino.core.toolChain.release.1290472919/JANTJE.EXTRA.CPP.COMPILE/delimiter=;
+environment/project/it.baeyens.arduino.core.toolChain.release.1290472919/JANTJE.EXTRA.CPP.COMPILE/operation=replace
+environment/project/it.baeyens.arduino.core.toolChain.release.1290472919/JANTJE.EXTRA.CPP.COMPILE/value=
 environment/project/it.baeyens.arduino.core.toolChain.release.1290472919/JANTJE.PLATFORM_FILE/delimiter=;
 environment/project/it.baeyens.arduino.core.toolChain.release.1290472919/JANTJE.PLATFORM_FILE/operation=replace
 environment/project/it.baeyens.arduino.core.toolChain.release.1290472919/JANTJE.PLATFORM_FILE/value=D\:/Arduino/hardware/arduino/avr/platform.txt
