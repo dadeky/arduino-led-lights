@@ -12,7 +12,8 @@ const int photoResistorPin = A0;	//pin that reads the photoresistor
 //runtime vars
 int pirVal1;							//the value of PIR sensor
 bool lightTurnedOn = false;				//is the light currently turned on
-int turnOnDelay = 5;					//number of miliseconds to step up the pwm by one
+int turnOnDelay = 7;					//number of miliseconds to step up the pwm by one
+int turnOnShift = 20;
 int turnOffDelay = 10;					//number of miliseconds to step down the pwm by one
 int photoResistorThreshold = 500;		//at which light intensity the PIR functionality is turned on
 int photoVal;							//stores the value of photo-resistor
@@ -25,14 +26,14 @@ void setup()
 	pinMode(pirInPin1,INPUT);
 	pinMode(boardLed,OUTPUT);
 	//for testing
-	analogWrite(ledPwmPin1,0);
+	/*analogWrite(ledPwmPin1,0);
 	analogWrite(ledPwmPin2,0);
-	analogWrite(ledPwmPin3,0);
+	analogWrite(ledPwmPin3,0);*/
 
 	//real
-	/*analogWrite(ledPwmPin1,255);
+	analogWrite(ledPwmPin1,255);
 	analogWrite(ledPwmPin2,255);
-	analogWrite(ledPwmPin3,255);*/
+	analogWrite(ledPwmPin3,255);
 	//Serial.begin(9600);
 }
 
@@ -45,9 +46,10 @@ void loop()
 		if(pirVal1 == HIGH){
 			if(photoVal < photoResistorThreshold){
 				if(!lightTurnedOn){
-					turnOnTheLight(ledPwmPin1);
+					turnOnTheLight();
+					/*turnOnTheLight(ledPwmPin1);
 					turnOnTheLight(ledPwmPin2);
-					turnOnTheLight(ledPwmPin3);
+					turnOnTheLight(ledPwmPin3);*/
 					lightTurnedOn = true;
 				}
 			}
@@ -57,41 +59,15 @@ void loop()
 }
 
 //for testing
-void turnOnTheLight(int lightPin)
+/*void turnOnTheLight()
 {
 	if(!lightTurnedOn){
 		digitalWrite(boardLed,HIGH);
-		for(int i=0; i <= 255; i++){
-			if(i>=0 && i<=255)analogWrite(lightPin,i);
-			delay(turnOnDelay);
-		}
-	}
-}
-
-void turnOffTheLight()
-{
-	if(lightTurnedOn){
-		for(int i=255; i >= 0; i--){
-			if(i>=0 && i<=255){
-				analogWrite(ledPwmPin1,i);
-				analogWrite(ledPwmPin2,i);
-				analogWrite(ledPwmPin3,i);
-			}
-			delay(turnOffDelay);
-		}
-	}
-	lightTurnedOn = false;
-	digitalWrite(boardLed,LOW);
-}
-
-
-//real
-/*void turnOnTheLight(int lightPin)
-{
-	if(!lightTurnedOn){
-		digitalWrite(boardLed,HIGH);
-		for(int i=255; i >= 0; i--){
+		int totalCycles = turnOnShift * 2 + 255;
+		for(int i=0; i <= totalCycles; i++){
 			if(i>=0 && i<=255)analogWrite(ledPwmPin1,i);
+			if(i>=turnOnShift && i<=turnOnShift+255)analogWrite(ledPwmPin2,i-turnOnShift);
+			if(i>=turnOnShift*2 && i<=turnOnShift*2+255)analogWrite(ledPwmPin3,i-turnOnShift*2);
 			delay(turnOnDelay);
 		}
 	}
@@ -100,7 +76,7 @@ void turnOffTheLight()
 void turnOffTheLight()
 {
 	if(lightTurnedOn){
-		for(int i=0; i <= 255; i++){
+		for(int i=255; i >= 0; i--){
 			if(i>=0 && i<=255){
 				analogWrite(ledPwmPin1,i);
 				analogWrite(ledPwmPin2,i);
@@ -112,3 +88,47 @@ void turnOffTheLight()
 	lightTurnedOn = false;
 	digitalWrite(boardLed,LOW);
 }*/
+
+
+//real
+void turnOnTheLight()
+{
+	if(!lightTurnedOn){
+		digitalWrite(boardLed,HIGH);
+		int totalCycles = turnOnShift * 2 + 255;
+		for(int i=0; i <= totalCycles; i++){
+			if(i>=0 && i<=255){
+				int j = map(i,0,255,255,0);
+				analogWrite(ledPwmPin1,j);
+			}
+
+			if(i>=turnOnShift && i<=turnOnShift+255){
+				int k = map(i,turnOnShift,turnOnShift+255,255,0);
+				analogWrite(ledPwmPin2,k);
+			}
+
+			if(i>=turnOnShift*2 && i<=turnOnShift*2+255){
+				int l = map(i,turnOnShift*2,turnOnShift*2+255,255,0);
+				analogWrite(ledPwmPin3,l);
+			}
+
+			delay(turnOnDelay);
+		}
+	}
+}
+
+void turnOffTheLight()
+{
+	if(lightTurnedOn){
+		for(int i=0; i <= 255; i++){
+			if(i>=0 && i<=255){
+				analogWrite(ledPwmPin1,i);
+				analogWrite(ledPwmPin2,i);
+				analogWrite(ledPwmPin3,i);
+			}
+			delay(turnOffDelay);
+		}
+	}
+	lightTurnedOn = false;
+	digitalWrite(boardLed,LOW);
+}

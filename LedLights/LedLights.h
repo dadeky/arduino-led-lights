@@ -21,7 +21,7 @@ void setup();
 #endif
 
 //add your function definitions for the project LedLights here
-void turnOnTheLight(int lightPin);
+void turnOnTheLight();
 void turnOffTheLight();
 
 
