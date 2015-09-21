@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>D:/git/arduino-led-lights/LedLights/kicad/led-lights.sch</source>
+    <date>21.9.2015. 13:52:52</date>
+    <tool>Eeschema (2015-08-05 BZR 6055, Git fa29c62)-product</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>led-lights.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="U1">
+      <value>arduino_nano</value>
+      <footprint>lib:arduino_nano</footprint>
+      <libsource lib="arduino" part="arduino_nano"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5555CA89</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>10K</value>
+      <footprint>Resistors_ThroughHole:Resistor_Horizontal_RM15mm</footprint>
+      <libsource lib="led-lights-rescue" part="R-RESCUE-led-lights"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5555D27C</tstamp>
+    </comp>
+    <comp ref="P3">
+      <value>LDR connector</value>
+      <footprint>Connect:AK300-2</footprint>
+      <libsource lib="conn" part="CONN_01X02"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5555E2DF</tstamp>
+    </comp>
+    <comp ref="P2">
+      <value>PIR1 connector</value>
+      <footprint>Connect:AK300-4</footprint>
+      <libsource lib="conn" part="CONN_01X04"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5555EDFB</tstamp>
+    </comp>
+    <comp ref="P1">
+      <value>Power input</value>
+      <footprint>Connect:AK300-2</footprint>
+      <libsource lib="conn" part="CONN_01X02"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>55FFC574</tstamp>
+    </comp>
+    <comp ref="P4">
+      <value>Power output</value>
+      <footprint>Connect:AK300-2</footprint>
+      <libsource lib="conn" part="CONN_01X02"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>55FFD153</tstamp>
+    </comp>
+    <comp ref="P5">
+      <value>LED 1</value>
+      <footprint>Connect:AK300-2</footprint>
+      <libsource lib="conn" part="CONN_01X02"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>55FFD4B0</tstamp>
+    </comp>
+    <comp ref="P6">
+      <value>LED 2</value>
+      <footprint>Connect:AK300-2</footprint>
+      <libsource lib="conn" part="CONN_01X02"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>55FFD727</tstamp>
+    </comp>
+    <comp ref="P7">
+      <value>PIR2 connector</value>
+      <footprint>Connect:AK300-4</footprint>
+      <libsource lib="conn" part="CONN_01X04"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>55FFDDF5</tstamp>
+    </comp>
+    <comp ref="P8">
+      <value>LED 3</value>
+      <footprint>Connect:AK300-2</footprint>
+      <libsource lib="conn" part="CONN_01X02"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>55FFFF3B</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="arduino" part="arduino_nano">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">arduino_nano</field>
+        <field name="Footprint">DIL20</field>
+      </fields>
+      <pins>
+        <pin num="5V" name="5V" type="output"/>
+        <pin num="3V3" name="3V3" type="input"/>
+        <pin num="A0" name="A0" type="input"/>
+        <pin num="A1" name="A1" type="input"/>
+        <pin num="A2" name="A2" type="input"/>
+        <pin num="A3" name="A3" type="input"/>
+        <pin num="A4" name="A4" type="input"/>
+        <pin num="A5" name="A5" type="input"/>
+        <pin num="A6" name="A6" type="input"/>
+        <pin num="A7" name="A7" type="output"/>
+        <pin num="D2" name="D2" type="BiDi"/>
+        <pin num="D3" name="#D3" type="BiDi"/>
+        <pin num="D4" name="D4" type="BiDi"/>
+        <pin num="D5" name="#D5" type="BiDi"/>
+        <pin num="D6" name="#D6" type="BiDi"/>
+        <pin num="D7" name="D7" type="BiDi"/>
+        <pin num="D8" name="D8" type="BiDi"/>
+        <pin num="D9" name="#D9" type="BiDi"/>
+        <pin num="D10" name="#D10" type="BiDi"/>
+        <pin num="D11" name="#D11" type="input"/>
+        <pin num="D12" name="D12" type="BiDi"/>
+        <pin num="D13" name="D13" type="input"/>
+        <pin num="GND" name="GND" type="BiDi"/>
+        <pin num="REF" name="REF" type="input"/>
+        <pin num="RST" name="RST" type="input"/>
+        <pin num="RX0" name="RX0" type="BiDi"/>
+        <pin num="TX1" name="TX1" type="BiDi"/>
+        <pin num="VIN" name="VIN" type="BiDi"/>
+      </pins>
+    </libpart>
+    <libpart lib="led-lights-rescue" part="R-RESCUE-led-lights">
+      <footprints>
+        <fp>R?</fp>
+        <fp>SM0603</fp>
+        <fp>SM0805</fp>
+        <fp>R?-*</fp>
+        <fp>SM1206</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R-RESCUE-led-lights</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="CONN_01X04">
+      <footprints>
+        <fp>Pin_Header_Straight_1X04</fp>
+        <fp>Pin_Header_Angled_1X04</fp>
+        <fp>Socket_Strip_Straight_1X04</fp>
+        <fp>Socket_Strip_Angled_1X04</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X04</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="CONN_01X02">
+      <footprints>
+        <fp>Pin_Header_Straight_1X02</fp>
+        <fp>Pin_Header_Angled_1X02</fp>
+        <fp>Socket_Strip_Straight_1X02</fp>
+        <fp>Socket_Strip_Angled_1X02</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X02</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="conn">
+      <uri>D:\KiCad\share\kicad\library\conn.lib</uri>
+    </library>
+    <library logical="led-lights-rescue">
+      <uri>D:\git\arduino-led-lights\LedLights\kicad\led-lights-rescue.lib</uri>
+    </library>
+    <library logical="arduino">
+      <uri>D:\git\arduino-led-lights\LedLights\kicad\lib\arduino.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="ledPwmPin2">
+      <node ref="U1" pin="D5"/>
+      <node ref="P6" pin="1"/>
+    </net>
+    <net code="2" name="GND">
+      <node ref="P8" pin="2"/>
+      <node ref="U1" pin="GND"/>
+      <node ref="R1" pin="2"/>
+      <node ref="P2" pin="3"/>
+      <node ref="P7" pin="3"/>
+      <node ref="P6" pin="2"/>
+      <node ref="P5" pin="2"/>
+    </net>
+    <net code="3" name="ledPwmPin1">
+      <node ref="U1" pin="D3"/>
+      <node ref="P5" pin="1"/>
+    </net>
+    <net code="4" name="Net-(P7-Pad4)">
+      <node ref="P7" pin="4"/>
+    </net>
+    <net code="5" name="pirInPin2">
+      <node ref="U1" pin="D4"/>
+      <node ref="P7" pin="2"/>
+    </net>
+    <net code="6" name="ledPwmPin3">
+      <node ref="P8" pin="1"/>
+      <node ref="U1" pin="D6"/>
+    </net>
+    <net code="7" name="+12V">
+      <node ref="U1" pin="VIN"/>
+      <node ref="P4" pin="1"/>
+      <node ref="P1" pin="1"/>
+    </net>
+    <net code="8" name="Net-(P2-Pad4)">
+      <node ref="P2" pin="4"/>
+    </net>
+    <net code="9" name="Net-(U1-PadD8)">
+      <node ref="U1" pin="D8"/>
+    </net>
+    <net code="10" name="Net-(U1-PadD12)">
+      <node ref="U1" pin="D12"/>
+    </net>
+    <net code="11" name="Net-(U1-PadD11)">
+      <node ref="U1" pin="D11"/>
+    </net>
+    <net code="12" name="Net-(U1-PadD10)">
+      <node ref="U1" pin="D10"/>
+    </net>
+    <net code="13" name="Net-(U1-PadD9)">
+      <node ref="U1" pin="D9"/>
+    </net>
+    <net code="14" name="Net-(U1-PadD7)">
+      <node ref="U1" pin="D7"/>
+    </net>
+    <net code="15" name="GNDPWR">
+      <node ref="P4" pin="2"/>
+      <node ref="P1" pin="2"/>
+    </net>
+    <net code="17" name="Net-(U1-PadTX1)">
+      <node ref="U1" pin="TX1"/>
+    </net>
+    <net code="18" name="Net-(U1-PadD13)">
+      <node ref="U1" pin="D13"/>
+    </net>
+    <net code="19" name="Net-(U1-Pad3V3)">
+      <node ref="U1" pin="3V3"/>
+    </net>
+    <net code="20" name="Net-(U1-PadREF)">
+      <node ref="U1" pin="REF"/>
+    </net>
+    <net code="21" name="Net-(U1-PadRST)">
+      <node ref="U1" pin="RST"/>
+    </net>
+    <net code="22" name="Net-(U1-PadA6)">
+      <node ref="U1" pin="A6"/>
+    </net>
+    <net code="23" name="Net-(U1-PadA1)">
+      <node ref="U1" pin="A1"/>
+    </net>
+    <net code="24" name="Net-(U1-PadA2)">
+      <node ref="U1" pin="A2"/>
+    </net>
+    <net code="25" name="Net-(U1-PadA3)">
+      <node ref="U1" pin="A3"/>
+    </net>
+    <net code="26" name="Net-(U1-PadA4)">
+      <node ref="U1" pin="A4"/>
+    </net>
+    <net code="27" name="Net-(U1-PadA5)">
+      <node ref="U1" pin="A5"/>
+    </net>
+    <net code="28" name="Net-(U1-PadA7)">
+      <node ref="U1" pin="A7"/>
+    </net>
+    <net code="29" name="Net-(U1-PadRX0)">
+      <node ref="U1" pin="RX0"/>
+    </net>
+    <net code="30" name="pirInPin1">
+      <node ref="P2" pin="2"/>
+      <node ref="U1" pin="D2"/>
+    </net>
+    <net code="31" name="Net-(P3-Pad2)">
+      <node ref="R1" pin="1"/>
+      <node ref="P3" pin="2"/>
+      <node ref="U1" pin="A0"/>
+    </net>
+    <net code="32" name="+5V">
+      <node ref="P3" pin="1"/>
+      <node ref="U1" pin="5V"/>
+      <node ref="P7" pin="1"/>
+      <node ref="P2" pin="1"/>
+    </net>
+  </nets>
+</export>

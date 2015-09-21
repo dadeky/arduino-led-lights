@@ -6,11 +6,13 @@ const int ledPwmPin1 = 3;			//the pin that is used to dim the light #1
 const int ledPwmPin2 = 5;			//the pin that is used to dim the light #2
 const int ledPwmPin3 = 6;			//the pin that is used to dim the light #3
 const int pirInPin1 = 2;			//Passive Infrared Sensor - motion detector #1
+const int pirInPin2 = 4;			//Passive Infrared Sensor - motion detector #2
 const int boardLed = 13;			//onboard led
-const int photoResistorPin = A0;	//pin that reads the photoresistor
+const int photoResistorPin = A0;	//pin that reads the photoresistor1
 
 //runtime vars
-int pirVal1;							//the value of PIR sensor
+int pirVal1;							//the value of PIR1 sensor
+int pirVal2;							//the value of PIR2 sensor
 bool lightTurnedOn = false;				//is the light currently turned on
 int turnOnDelay = 7;					//number of miliseconds to step up the pwm by one
 int turnOnShift = 20;
@@ -24,6 +26,7 @@ void setup()
 	pinMode(ledPwmPin2,OUTPUT);
 	pinMode(ledPwmPin3,OUTPUT);
 	pinMode(pirInPin1,INPUT);
+	pinMode(pirInPin2,INPUT);
 	pinMode(boardLed,OUTPUT);
 	//for testing
 	/*analogWrite(ledPwmPin1,0);
@@ -42,8 +45,9 @@ void loop()
 	/*Serial.println(analogRead(photoResistorPin));
 	delay(1000);*/
 	pirVal1 = digitalRead(pirInPin1);
+	pirVal2 = digitalRead(pirInPin2);
 	photoVal = analogRead(photoResistorPin);
-		if(pirVal1 == HIGH){
+		if(pirVal1 == HIGH || pirVal2 == HIGH){
 			if(photoVal < photoResistorThreshold){
 				if(!lightTurnedOn){
 					turnOnTheLight();
