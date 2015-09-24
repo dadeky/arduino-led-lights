@@ -28,12 +28,6 @@ void setup()
 	pinMode(pirInPin1,INPUT);
 	pinMode(pirInPin2,INPUT);
 	pinMode(boardLed,OUTPUT);
-	//for testing
-	/*analogWrite(ledPwmPin1,0);
-	analogWrite(ledPwmPin2,0);
-	analogWrite(ledPwmPin3,0);*/
-
-	//real
 	analogWrite(ledPwmPin1,255);
 	analogWrite(ledPwmPin2,255);
 	analogWrite(ledPwmPin3,255);
@@ -51,9 +45,6 @@ void loop()
 			if(photoVal < photoResistorThreshold){
 				if(!lightTurnedOn){
 					turnOnTheLight();
-					/*turnOnTheLight(ledPwmPin1);
-					turnOnTheLight(ledPwmPin2);
-					turnOnTheLight(ledPwmPin3);*/
 					lightTurnedOn = true;
 				}
 			}
@@ -62,39 +53,6 @@ void loop()
 		}
 }
 
-//for testing
-/*void turnOnTheLight()
-{
-	if(!lightTurnedOn){
-		digitalWrite(boardLed,HIGH);
-		int totalCycles = turnOnShift * 2 + 255;
-		for(int i=0; i <= totalCycles; i++){
-			if(i>=0 && i<=255)analogWrite(ledPwmPin1,i);
-			if(i>=turnOnShift && i<=turnOnShift+255)analogWrite(ledPwmPin2,i-turnOnShift);
-			if(i>=turnOnShift*2 && i<=turnOnShift*2+255)analogWrite(ledPwmPin3,i-turnOnShift*2);
-			delay(turnOnDelay);
-		}
-	}
-}
-
-void turnOffTheLight()
-{
-	if(lightTurnedOn){
-		for(int i=255; i >= 0; i--){
-			if(i>=0 && i<=255){
-				analogWrite(ledPwmPin1,i);
-				analogWrite(ledPwmPin2,i);
-				analogWrite(ledPwmPin3,i);
-			}
-			delay(turnOffDelay);
-		}
-	}
-	lightTurnedOn = false;
-	digitalWrite(boardLed,LOW);
-}*/
-
-
-//real
 void turnOnTheLight()
 {
 	if(!lightTurnedOn){
