@@ -2,16 +2,16 @@
 <export version="D">
   <design>
     <source>D:/git/arduino-led-lights/LedLights/kicad/led-lights.sch</source>
-    <date>23.9.2015. 12:44:51</date>
+    <date>9.10.2015. 16:09:24</date>
     <tool>Eeschema (2015-08-05 BZR 6055, Git fa29c62)-product</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
-        <title/>
+        <title>Led lights</title>
         <company/>
-        <rev/>
-        <date/>
+        <rev>1.01</rev>
+        <date>2015-10-09</date>
         <source>led-lights.sch</source>
-        <comment number="1" value=""/>
+        <comment number="1" value="The schema that describes the wiring for LedLights project"/>
         <comment number="2" value=""/>
         <comment number="3" value=""/>
         <comment number="4" value=""/>
@@ -84,40 +84,6 @@
     </comp>
   </components>
   <libparts>
-    <libpart lib="conn" part="CONN_01X02">
-      <footprints>
-        <fp>Pin_Header_Straight_1X02</fp>
-        <fp>Pin_Header_Angled_1X02</fp>
-        <fp>Socket_Strip_Straight_1X02</fp>
-        <fp>Socket_Strip_Angled_1X02</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">P</field>
-        <field name="Value">CONN_01X02</field>
-      </fields>
-      <pins>
-        <pin num="1" name="P1" type="passive"/>
-        <pin num="2" name="P2" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="conn" part="CONN_01X04">
-      <footprints>
-        <fp>Pin_Header_Straight_1X04</fp>
-        <fp>Pin_Header_Angled_1X04</fp>
-        <fp>Socket_Strip_Straight_1X04</fp>
-        <fp>Socket_Strip_Angled_1X04</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">P</field>
-        <field name="Value">CONN_01X04</field>
-      </fields>
-      <pins>
-        <pin num="1" name="P1" type="passive"/>
-        <pin num="2" name="P2" type="passive"/>
-        <pin num="3" name="P3" type="passive"/>
-        <pin num="4" name="P4" type="passive"/>
-      </pins>
-    </libpart>
     <libpart lib="led-lights-rescue" part="R-RESCUE-led-lights">
       <footprints>
         <fp>R?</fp>
@@ -172,13 +138,47 @@
         <pin num="VIN" name="VIN" type="BiDi"/>
       </pins>
     </libpart>
+    <libpart lib="conn" part="CONN_01X02">
+      <footprints>
+        <fp>Pin_Header_Straight_1X02</fp>
+        <fp>Pin_Header_Angled_1X02</fp>
+        <fp>Socket_Strip_Straight_1X02</fp>
+        <fp>Socket_Strip_Angled_1X02</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X02</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="CONN_01X04">
+      <footprints>
+        <fp>Pin_Header_Straight_1X04</fp>
+        <fp>Pin_Header_Angled_1X04</fp>
+        <fp>Socket_Strip_Straight_1X04</fp>
+        <fp>Socket_Strip_Angled_1X04</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X04</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+      </pins>
+    </libpart>
   </libparts>
   <libraries>
-    <library logical="conn">
-      <uri>D:\KiCad\share\kicad\library\conn.lib</uri>
-    </library>
     <library logical="led-lights-rescue">
       <uri>D:\git\arduino-led-lights\LedLights\kicad\led-lights-rescue.lib</uri>
+    </library>
+    <library logical="conn">
+      <uri>D:\KiCad\share\kicad\library\conn.lib</uri>
     </library>
     <library logical="arduino">
       <uri>D:\git\arduino-led-lights\LedLights\kicad\lib\arduino.lib</uri>
