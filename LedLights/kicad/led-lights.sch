@@ -36,11 +36,11 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
+Title "Led lights"
+Date "2015-10-09"
+Rev "1.01"
 Comp ""
-Comment1 ""
+Comment1 "The schema that describes the wiring for LedLights project"
 Comment2 ""
 Comment3 ""
 Comment4 ""

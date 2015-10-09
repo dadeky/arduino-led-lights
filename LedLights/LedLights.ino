@@ -15,7 +15,7 @@ int pirVal1;							//the value of PIR1 sensor
 int pirVal2;							//the value of PIR2 sensor
 bool lightTurnedOn = false;				//is the light currently turned on
 int turnOnDelay = 7;					//number of miliseconds to step up the pwm by one
-int turnOnShift = 20;
+int turnOnShift = 1000;
 int turnOffDelay = 10;					//number of miliseconds to step down the pwm by one
 int photoResistorThreshold = 500;		//at which light intensity the PIR functionality is turned on
 int photoVal;							//stores the value of photo-resistor
