@@ -1,5 +1,5 @@
 // Do not remove the include below
-#include "LedLights.h"
+#include "Arduino.h"
 
 //pins
 const int ledPwmPin1 = 3;			//the pin that is used to dim the light #1
