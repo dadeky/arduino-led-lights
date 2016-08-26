@@ -4,12 +4,12 @@
 
 -include ../makefile.init
 
-RM := rm -f
+RM := del 
 
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include subdir.mk
--include core/core/subdir.mk
+-include core\core/subdir.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
@@ -54,10 +54,7 @@ arduino.ar \
 ELF += \
 LedLights.elf \
 
-EEP += \
-LedLights.eep \
-
-FLASH_IMAGE += \
+HEX += \
 LedLights.hex \
 
 
@@ -65,7 +62,7 @@ LedLights.hex \
 all: LedLights
 
 # Tool invocations
-LedLights: $(FLASH_IMAGE)
+LedLights: $(HEX)
 	@echo 'Building target: $@'
 	@echo 'Printing size:'
 	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-size" -A "D:/git/arduino-led-lights/LedLights/Release/LedLights.elf"
@@ -74,31 +71,26 @@ LedLights: $(FLASH_IMAGE)
 
 arduino.ar: $(AR_OBJ)
 	@echo 'Starting archiver'
-	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-ar" rcs  "D:/git/arduino-led-lights/LedLights/Release/arduino.ar"    arduino.ar $(AR_OBJ)
+	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-ar" rcs "D:/git/arduino-led-lights/LedLights/Release/arduino.ar"  arduino.ar $(AR_OBJ)
 	@echo 'Finished building: $@'
 	@echo ' '
 
 LedLights.elf: $(LINK_OBJ) $(AR)
 	@echo 'Starting combiner'
-	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-gcc" -Os -Wl,--gc-sections -mmcu=atmega328p  -o "D:/git/arduino-led-lights/LedLights/Release/LedLights.elf"   $(LINK_OBJ) $(AR)    "-LD:/git/arduino-led-lights/LedLights/Release" -lm
+	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-gcc" -Os -Wl,--gc-sections -mmcu=atmega328p -o "D:/git/arduino-led-lights/LedLights/Release/LedLights.elf"  $(LINK_OBJ) $(AR)  "-LD:/git/arduino-led-lights/LedLights/Release" -lm
 	@echo 'Finished building: $@'
 	@echo ' '
 
-LedLights.eep: $(ELF)
+LedLights.hex: $(ELF)
 	@echo 'Create eeprom image'
-	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-objcopy" -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0  "D:/git/arduino-led-lights/LedLights/Release/LedLights.elf" "D:/git/arduino-led-lights/LedLights/Release/LedLights.eep"
-	@echo 'Finished building: $@'
-	@echo ' '
-
-LedLights.hex: $(EEP)
-	@echo 'Create Flash image (ihex format)'
-	"D:\eclipse_mars\arduinoPlugin\tools\arduino\avr-gcc\4.8.1-arduino5/bin/avr-objcopy" -O ihex -R .eeprom  "D:/git/arduino-led-lights/LedLights/Release/LedLights.elf" "D:/git/arduino-led-lights/LedLights/Release/LedLights.hex"
+	${A.RECIPE.OBJCOPY.HEX.PATTERN}
+	${A.RECIPE.OBJCOPY.EEP.PATTERN}
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(C_UPPER_DEPS)$(PDE_DEPS)$(C_DEPS)$(AR)$(EEP)$(FLASH_IMAGE)$(CC_DEPS)$(AR_OBJ)$(C++_DEPS)$(LINK_OBJ)$(CXX_DEPS)$(ASM_DEPS)$(INO_DEPS)$(SIZEDUMMY)$(S_UPPER_DEPS)$(ELF)$(CPP_DEPS) LedLights
+	-$(RM) $(C_UPPER_DEPS)$(PDE_DEPS)$(C_DEPS)$(AR)$(CC_DEPS)$(AR_OBJ)$(C++_DEPS)$(LINK_OBJ)$(CXX_DEPS)$(ASM_DEPS)$(HEX)$(INO_DEPS)$(SIZEDUMMY)$(S_UPPER_DEPS)$(ELF)$(CPP_DEPS)
 	-@echo ' '
 
 .PHONY: all clean dependents

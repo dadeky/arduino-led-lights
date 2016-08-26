@@ -15,20 +15,18 @@ C++_SRCS :=
 PDE_SRCS := 
 CC_SRCS := 
 AR_SRCS := 
-EEP_SRCS := 
 C_SRCS := 
 C_UPPER_DEPS := 
 PDE_DEPS := 
 C_DEPS := 
 AR := 
-EEP := 
-FLASH_IMAGE := 
 CC_DEPS := 
 AR_OBJ := 
 C++_DEPS := 
 LINK_OBJ := 
 CXX_DEPS := 
 ASM_DEPS := 
+HEX := 
 INO_DEPS := 
 SIZEDUMMY := 
 S_UPPER_DEPS := 
@@ -38,5 +36,5 @@ CPP_DEPS :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 . \
-core/core \
+core\core \
 
