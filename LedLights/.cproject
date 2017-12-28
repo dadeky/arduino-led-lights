@@ -14,32 +14,34 @@
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
 				<configuration artifactName="${ProjName}" buildProperties="" description="" id="it.baeyens.arduino.core.toolChain.release.1290472919" name="Release" parent="org.eclipse.cdt.build.core.emptycfg">
 					<folderInfo id="it.baeyens.arduino.core.toolChain.release.1290472919.195288398" name="/" resourcePath="">
-						<toolChain id="it.baeyens.arduino.core.toolChain.release.572174407" name="Arduino Toolchain" superClass="it.baeyens.arduino.core.toolChain.release">
-							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="it.baeyens.arduino.targetplatform.351817668" name="Arduino Target" osList="all" superClass="it.baeyens.arduino.targetplatform"/>
-							<builder buildPath="${workspace_loc:/LedLights}/Release" id="it.baeyens.arduino.sketch.builder.1055277399" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Arduino sketch builder" superClass="it.baeyens.arduino.sketch.builder"/>
-							<tool id="it.baeyens.arduino.tool.sketch.compiler.cpp.919482164" name="Arduino C++ Compiler" superClass="it.baeyens.arduino.tool.sketch.compiler.cpp">
-								<option id="it.baeyens.arduino.compiler.cpp.sketch.option.incpath.630941466" name="Include Paths (-I)" superClass="it.baeyens.arduino.compiler.cpp.sketch.option.incpath" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/LedLights/arduino/core}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/LedLights/arduino/variant}&quot;"/>
+						<toolChain id="io.sloeber.core.toolChain.release.1074878721" name="Arduino Toolchain (Sloeber edition)" superClass="io.sloeber.core.toolChain.release">
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="io.sloeber.targetplatform.289386736" name="Arduino Target" osList="all" superClass="io.sloeber.targetplatform"/>
+							<builder buildPath="${workspace_loc:/LedLights}/Release" id="io.sloeber.sketch.builder.437722685" keepEnvironmentInBuildfile="false" name="Arduino sketch builder" superClass="io.sloeber.sketch.builder"/>
+							<tool id="io.sloeber.tool.sketch.compiler.cpp.353978401" name="Arduino C++ Compiler" superClass="io.sloeber.tool.sketch.compiler.cpp">
+								<option id="io.sloeber.compiler.cpp.sketch.option.incpath.1930132105" name="Include Paths (-I)" superClass="io.sloeber.compiler.cpp.sketch.option.incpath" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/LedLights/core/core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/LedLights/core/variant}&quot;"/>
 								</option>
-								<inputType id="it.baeyens.arduino.compiler.cpp.sketch.input.573310779" name="CPP source files" superClass="it.baeyens.arduino.compiler.cpp.sketch.input"/>
+								<inputType id="io.sloeber.compiler.cpp.sketch.input.1735093963" name="CPP source files" superClass="io.sloeber.compiler.cpp.sketch.input"/>
 							</tool>
-							<tool id="it.baeyens.arduino.tool.compiler.c.1378985840" name="Arduino C Compiler" superClass="it.baeyens.arduino.tool.compiler.c">
-								<option id="it.baeyens.arduino.compiler.c.sketch.option.incpath.1699039691" name="Include Paths (-I)" superClass="it.baeyens.arduino.compiler.c.sketch.option.incpath" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/LedLights/arduino/core}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/LedLights/arduino/variant}&quot;"/>
+							<tool id="io.sloeber.tool.compiler.c.1248507926" name="Arduino C Compiler" superClass="io.sloeber.tool.compiler.c">
+								<option id="io.sloeber.compiler.c.sketch.option.incpath.1011327123" name="Include Paths (-I)" superClass="io.sloeber.compiler.c.sketch.option.incpath" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/LedLights/core/core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/LedLights/core/variant}&quot;"/>
 								</option>
-								<inputType id="it.baeyens.arduino.compiler.c.sketch.input.444966888" name="C Source Files" superClass="it.baeyens.arduino.compiler.c.sketch.input"/>
+								<inputType id="io.sloeber.compiler.c.sketch.input.300896036" name="C Source Files" superClass="io.sloeber.compiler.c.sketch.input"/>
 							</tool>
-							<tool id="it.baeyens.arduino.tool.ar.376557612" name="Arduino archiver" superClass="it.baeyens.arduino.tool.ar"/>
-							<tool id="it.baeyens.arduino.tool.combine.2002732108" name="Arduino combiner" superClass="it.baeyens.arduino.tool.combine"/>
-							<tool id="it.baeyens.arduino.tool.objcopy.eep.1626875830" name="Arduino tool Create eeprom" superClass="it.baeyens.arduino.tool.objcopy.eep"/>
-							<tool id="it.baeyens.arduino.tool.size.1857255758" name="Arduino tool Print Size" superClass="it.baeyens.arduino.tool.size"/>
-							<tool id="it.baeyens.arduino.tool.sketch.compiler.s.1809167240" name="Arduino Assembler" superClass="it.baeyens.arduino.tool.sketch.compiler.s"/>
+							<tool id="io.sloeber.tool.sketch.compiler.s.1802281275" name="Arduino Assembler" superClass="io.sloeber.tool.sketch.compiler.s">
+								<option id="io.sloeber.compiler.asm.sketch.option.incpath.93541374" name="Include Paths (-I)" superClass="io.sloeber.compiler.asm.sketch.option.incpath" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/LedLights/core/core}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/LedLights/core/variant}&quot;"/>
+								</option>
+								<inputType id="io.sloeber.compiler.S.sketch.input.482310156" name="Assembly source files" superClass="io.sloeber.compiler.S.sketch.input"/>
+							</tool>
+							<tool id="io.sloeber.tool.ar.870354500" name="Arduino archiver" superClass="io.sloeber.tool.ar"/>
+							<tool id="io.sloeber.tool.combine.1250938685" name="Arduino combiner" superClass="io.sloeber.tool.combine"/>
+							<tool id="io.sloeber.tool.objcopy.eep.1654494133" name="Arduino tool Create eeprom" superClass="io.sloeber.tool.objcopy.eep"/>
+							<tool id="io.sloeber.tool.size.1871115836" name="Arduino tool Print Size" superClass="io.sloeber.tool.size"/>
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>

@@ -14,7 +14,6 @@ CXX_SRCS :=
 C++_SRCS := 
 PDE_SRCS := 
 CC_SRCS := 
-AR_SRCS := 
 C_SRCS := 
 C_UPPER_DEPS := 
 PDE_DEPS := 
@@ -36,5 +35,5 @@ CPP_DEPS :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 . \
-core\core \
+core/core \
 

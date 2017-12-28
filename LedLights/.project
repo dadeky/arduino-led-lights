@@ -6,6 +6,11 @@
 	</projects>
 	<buildSpec>
 		<buildCommand>
+			<name>io.sloeber.core.inoToCpp</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
 			<name>org.eclipse.cdt.managedbuilder.core.genmakebuilder</name>
 			<triggers>clean,full,incremental,</triggers>
 			<arguments>
@@ -23,7 +28,7 @@
 		<nature>org.eclipse.cdt.core.ccnature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
-		<nature>it.baeyens.arduinonature</nature>
+		<nature>io.sloeber.arduinonature</nature>
 	</natures>
 	<linkedResources>
 		<link>
@@ -39,12 +44,12 @@
 		<link>
 			<name>core/core</name>
 			<type>2</type>
-			<location>D:/eclipse_mars/arduinoPlugin/packages/arduino/hardware/avr/1.6.11/cores/arduino</location>
+			<locationURI>ECLIPSE_HOME/arduinoPlugin/packages/arduino/hardware/avr/1.6.20/cores/arduino</locationURI>
 		</link>
 		<link>
 			<name>core/variant</name>
 			<type>2</type>
-			<location>D:/eclipse_mars/arduinoPlugin/packages/arduino/hardware/avr/1.6.11/variants/eightanaloginputs</location>
+			<locationURI>ECLIPSE_HOME/arduinoPlugin/packages/arduino/hardware/avr/1.6.20/variants/eightanaloginputs</locationURI>
 		</link>
 	</linkedResources>
 	<variableList>
