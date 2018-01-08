@@ -5,7 +5,6 @@
 //This file has been generated on 2017-12-28 14:12:00
 
 #include "Arduino.h"
-#include "Arduino.h"
 
 void setup() ;
 void loop() ;
