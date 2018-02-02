@@ -43,10 +43,7 @@ void loop()
 	photoVal = analogRead(photoResistorPin);
 		if(pirVal1 == HIGH/* || pirVal2 == HIGH*/){
 			if(photoVal < photoResistorThreshold){
-				if(!lightTurnedOn){
-					turnOnTheLight();
-					lightTurnedOn = true;
-				}
+				turnOnTheLight();
 			}
 		}else{
 			turnOffTheLight();
@@ -76,6 +73,7 @@ void turnOnTheLight()
 
 			delay(turnOnDelay);
 		}
+		lightTurnedOn = true;
 	}
 }
 
