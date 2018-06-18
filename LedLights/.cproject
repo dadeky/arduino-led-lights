@@ -21,6 +21,8 @@
 								<option id="io.sloeber.compiler.cpp.sketch.option.incpath.1930132105" name="Include Paths (-I)" superClass="io.sloeber.compiler.cpp.sketch.option.incpath" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/LedLights/core/core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/LedLights/core/variant}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/LedLights/libraries/ITEADLIB_Arduino_WeeESP8266-master}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/LedLights/libraries/SoftwareSerial/src}&quot;"/>
 								</option>
 								<inputType id="io.sloeber.compiler.cpp.sketch.input.1735093963" name="CPP source files" superClass="io.sloeber.compiler.cpp.sketch.input"/>
 							</tool>
@@ -28,6 +30,8 @@
 								<option id="io.sloeber.compiler.c.sketch.option.incpath.1011327123" name="Include Paths (-I)" superClass="io.sloeber.compiler.c.sketch.option.incpath" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/LedLights/core/core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/LedLights/core/variant}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/LedLights/libraries/ITEADLIB_Arduino_WeeESP8266-master}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/LedLights/libraries/SoftwareSerial/src}&quot;"/>
 								</option>
 								<inputType id="io.sloeber.compiler.c.sketch.input.300896036" name="C Source Files" superClass="io.sloeber.compiler.c.sketch.input"/>
 							</tool>
@@ -35,6 +39,8 @@
 								<option id="io.sloeber.compiler.asm.sketch.option.incpath.93541374" name="Include Paths (-I)" superClass="io.sloeber.compiler.asm.sketch.option.incpath" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/LedLights/core/core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/LedLights/core/variant}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/LedLights/libraries/ITEADLIB_Arduino_WeeESP8266-master}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/LedLights/libraries/SoftwareSerial/src}&quot;"/>
 								</option>
 								<inputType id="io.sloeber.compiler.S.sketch.input.482310156" name="Assembly source files" superClass="io.sloeber.compiler.S.sketch.input"/>
 							</tool>
@@ -45,7 +51,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="Libraries/*/?xamples" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name=""/>
+						<entry excluding="libraries/ITEADLIB_Arduino_WeeESP8266-master/doc|Libraries/*/?xamples" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>

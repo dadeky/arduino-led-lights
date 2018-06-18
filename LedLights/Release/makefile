@@ -9,6 +9,18 @@ RM := del
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include subdir.mk
+-include libraries\SoftwareSerial\src\subdir.mk
+-include libraries\SoftwareSerial\examples\TwoPortReceive\subdir.mk
+-include libraries\SoftwareSerial\examples\SoftwareSerialExample\subdir.mk
+-include libraries\ITEADLIB_Arduino_WeeESP8266-master\examples\UDPClientSingle\subdir.mk
+-include libraries\ITEADLIB_Arduino_WeeESP8266-master\examples\UDPClientMultiple\subdir.mk
+-include libraries\ITEADLIB_Arduino_WeeESP8266-master\examples\TCPServer\subdir.mk
+-include libraries\ITEADLIB_Arduino_WeeESP8266-master\examples\TCPClientSingleUNO\subdir.mk
+-include libraries\ITEADLIB_Arduino_WeeESP8266-master\examples\TCPClientSingle\subdir.mk
+-include libraries\ITEADLIB_Arduino_WeeESP8266-master\examples\TCPClientMultiple\subdir.mk
+-include libraries\ITEADLIB_Arduino_WeeESP8266-master\examples\HTTPGET\subdir.mk
+-include libraries\ITEADLIB_Arduino_WeeESP8266-master\examples\ConnectWiFi\subdir.mk
+-include libraries\ITEADLIB_Arduino_WeeESP8266-master\subdir.mk
 -include core\core\subdir.mk
 -include objects.mk
 
@@ -82,7 +94,7 @@ LedLights.elf: $(LINK_OBJ) $(AR)
 	@echo ' '
 
 LedLights.hex: $(ELF)
-	@echo 'Create eeprom image'
+	@echo 'Do all objcopy commands'
 	${A.RECIPE.OBJCOPY.EEP.PATTERN}
 	${A.RECIPE.OBJCOPY.HEX.PATTERN}
 	@echo 'Finished building: $@'
@@ -94,6 +106,5 @@ clean:
 	-@echo ' '
 
 .PHONY: all clean dependents
-.SECONDARY:
 
 -include ..\makefile.targets
