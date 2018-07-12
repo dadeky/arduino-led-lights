@@ -35,17 +35,17 @@ CPP_DEPS :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 . \
-core\core \
-libraries\ITEADLIB_Arduino_WeeESP8266-master \
-libraries\ITEADLIB_Arduino_WeeESP8266-master\examples\ConnectWiFi \
-libraries\ITEADLIB_Arduino_WeeESP8266-master\examples\HTTPGET \
-libraries\ITEADLIB_Arduino_WeeESP8266-master\examples\TCPClientMultiple \
-libraries\ITEADLIB_Arduino_WeeESP8266-master\examples\TCPClientSingle \
-libraries\ITEADLIB_Arduino_WeeESP8266-master\examples\TCPClientSingleUNO \
-libraries\ITEADLIB_Arduino_WeeESP8266-master\examples\TCPServer \
-libraries\ITEADLIB_Arduino_WeeESP8266-master\examples\UDPClientMultiple \
-libraries\ITEADLIB_Arduino_WeeESP8266-master\examples\UDPClientSingle \
-libraries\SoftwareSerial\examples\SoftwareSerialExample \
-libraries\SoftwareSerial\examples\TwoPortReceive \
-libraries\SoftwareSerial\src \
+core/core \
+libraries/ITEADLIB_Arduino_WeeESP8266-master \
+libraries/ITEADLIB_Arduino_WeeESP8266-master/examples/ConnectWiFi \
+libraries/ITEADLIB_Arduino_WeeESP8266-master/examples/HTTPGET \
+libraries/ITEADLIB_Arduino_WeeESP8266-master/examples/TCPClientMultiple \
+libraries/ITEADLIB_Arduino_WeeESP8266-master/examples/TCPClientSingle \
+libraries/ITEADLIB_Arduino_WeeESP8266-master/examples/TCPClientSingleUNO \
+libraries/ITEADLIB_Arduino_WeeESP8266-master/examples/TCPServer \
+libraries/ITEADLIB_Arduino_WeeESP8266-master/examples/UDPClientMultiple \
+libraries/ITEADLIB_Arduino_WeeESP8266-master/examples/UDPClientSingle \
+libraries/SoftwareSerial/examples/SoftwareSerialExample \
+libraries/SoftwareSerial/examples/TwoPortReceive \
+libraries/SoftwareSerial/src \
 
